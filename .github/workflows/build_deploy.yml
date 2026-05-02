@@ -1,93 +1,95 @@
+name: SpringBoot CI/CD Pipeline
 
-  name: SpringBoot CI/CD Pipeline
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
 
-  on:
-    push:
-      branches: [ master ]
-    workflow_dispatch:
+jobs:
+  # =========================
+  # BUILD JOB
+  # =========================
+  Build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        service:
+          - api-gateway
+          - config-server
+          - bank-service
+          - transaction-service
 
-  jobs:
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    # =========================
-    # BUILD JOB
-    # =========================
-    Build:
-      runs-on: ubuntu-latest
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: 21
 
-      strategy:
-        matrix:
-          service:
-            - api-gateway
-            - config-server
-            - bank-service
-            - transaction-service
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
-      steps:
-        - name: Checkout code
-          uses: actions/checkout@v3
+      # ✅ FIX: Grant execute permission for mvnw
+      - name: Grant execute permission for mvnw
+        run: chmod +x ./mvnw
+        working-directory: ${{ matrix.service }}
 
-        - name: Set up Java
-          uses: actions/setup-java@v3
-          with:
-            distribution: temurin
-            java-version: 21
+      # ✅ UPDATED: Build Jar and Push Docker Image
+      - name: Build & Push Image
+        working-directory: ${{ matrix.service }}
+        run: |
+          ./mvnw clean package -DskipTests
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/${{ matrix.service }}:latest .
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/${{ matrix.service }}:latest
 
-        - name: Login to Docker Hub
-          uses: docker/login-action@v2
-          with:
-            username: ${{ secrets.DOCKERHUB_USERNAME }}
-            password: ${{ secrets.DOCKERHUB_PASSWORD }}
+  # =========================
+  # DEPLOY JOB
+  # =========================
+  Deploy:
+    needs: Build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: 'read'
+      id-token: 'write' # Required for OIDC authentication
 
-        - name: Build & Push Image
-          working-directory: ${{ matrix.service }}
-          run: |
-            ./mvnw clean package -DskipTests
-    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    # =========================
-    # DEPLOY JOB
-    # =========================
-    Deploy:
-      needs: Build
-      runs-on: ubuntu-latest
+      - name: Authenticate to GCP
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ secrets.GCP_WORKLOAD_PROVIDER }}
+          service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
 
-      steps:
-        - name: Checkout code
-          uses: actions/checkout@v3
+      - name: Setup gcloud
+        uses: google-github-actions/setup-gcloud@v2
 
-        # ✅ Authenticate via OIDC (NO KEYS)
-        - name: Authenticate to GCP
-          uses: google-github-actions/auth@v2
-          with:
-            workload_identity_provider: ${{ secrets.GCP_WORKLOAD_PROVIDER }}
-            service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+      - name: Connect to GKE
+        run: |
+          gcloud container clusters get-credentials my-cluster \
+            --zone us-central1 \
+            --project ${{ secrets.GKE_PROJECT }}
 
-        - name: Setup gcloud
-          uses: google-github-actions/setup-gcloud@v2
+      - name: Deploy to Kubernetes
+        run: kubectl apply -f k8s/
 
-        - name: Connect to GKE
-          run: |
-            gcloud container clusters get-credentials my-cluster \
-              --zone us-central1 \
-              --project ${{ secrets.GKE_PROJECT }}
+      - name: Restart deployments
+        run: |
+          kubectl rollout restart deployment api-gateway
+          kubectl rollout restart deployment config-server
+          kubectl rollout restart deployment bank-service
+          kubectl rollout restart deployment transaction-service
 
-        - name: Verify connection
-          run: kubectl get nodes
-
-        - name: Deploy to Kubernetes
-          run: kubectl apply -f k8s/
-
-        - name: Restart deployments
-          run: |
-            kubectl rollout restart deployment api-gateway
-            kubectl rollout restart deployment config-server
-            kubectl rollout restart deployment bank-service
-            kubectl rollout restart deployment transaction-service
-
-        - name: Check rollout
-          run: |
-            kubectl rollout status deployment api-gateway
-            kubectl rollout status deployment config-server
-            kubectl rollout status deployment bank-service
-            kubectl rollout status deployment transaction-service
-    
+      - name: Check rollout
+        run: |
+          kubectl rollout status deployment api-gateway
+          kubectl rollout status deployment config-server
+          kubectl rollout status deployment bank-service
+          kubectl rollout status deployment transaction-service
