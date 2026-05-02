@@ -34,5 +34,7 @@ build/
 
 
 config-server/src/main/resources/application.yml
+k8s/my-secret.yml
+
 
 
