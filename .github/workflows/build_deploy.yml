@@ -12,7 +12,7 @@ jobs:
   Build:
     runs-on: ubuntu-latest
     strategy:
-      fail-fast: false # Allows other services to build even if one fails
+      fail-fast: false
       matrix:
         service:
           - api-gateway
@@ -40,7 +40,6 @@ jobs:
         run: chmod +x ./mvnw
         working-directory: ${{ matrix.service }}
 
-      # ✅ Jib handles compilation, image building, and pushing in one step
       - name: Build & Push Image with Jib
         working-directory: ${{ matrix.service }}
         run: |
@@ -56,31 +55,35 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: 'read'
-      id-token: 'write' # Mandatory for OIDC Workload Identity Federation
+      id-token: 'write' # Mandatory for Workload Identity Federation
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # ✅ Authenticate via OIDC (No keys required)
+      # 1. Authenticate via OIDC
       - name: Authenticate to GCP
         uses: google-github-actions/auth@v2
         with:
-          workload_identity_provider: ${{ secrets.GCP_WORKLOAD_PROVIDER }}
-          service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+          # Use the verified provider string
+          workload_identity_provider: 'projects/178831723347/locations/global/workloadIdentityPools/github-pool/providers/github-provider'
+          service_account: 'github-sa@kubernetes-9766.iam.gserviceaccount.com'
 
-      - name: Setup gcloud
-        uses: google-github-actions/setup-gcloud@v2
-
+      # 2. Get GKE Credentials & Fix Auth Plugin issue
       - name: Connect to GKE
-        run: |
-          gcloud container clusters get-credentials my-cluster \
-            --zone us-central1 \
-            --project ${{ secrets.GKE_PROJECT }}
+        uses: google-github-actions/get-gke-credentials@v2
+        with:
+          cluster_name: 'my-cluster'
+          location: 'us-central1' # Adjust to 'us-central1-a' if specific zone
+          project_id: 'kubernetes-9766'
+        env:
+          USE_GKE_GCLOUD_AUTH_PLUGIN: 'true' # 👈 Fixes the 'plugin not found' error
 
-      # ✅ Deploy and trigger rollout to pull the latest Jib images
+      # 3. Deploy and trigger rollout
       - name: Deploy to Kubernetes
-        run: kubectl apply -f k8s/
+        run: |
+          # Use --validate=false to skip OpenAPI download issues
+          kubectl apply -f k8s/ --validate=false
 
       - name: Restart and Check Rollout
         run: |
