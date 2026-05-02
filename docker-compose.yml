@@ -1,0 +1,113 @@
+version: "3.8"
+
+services:
+  transaction-db:
+    image: postgres:15
+    container_name: transaction-db
+    environment:
+      POSTGRES_DB: transaction
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root123
+    volumes:
+      - transaction-db-data:/var/lib/postgresql/data
+    networks:
+      - myNetwork
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d transaction"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  bank-db:
+    image: postgres:15
+    container_name: bank-db
+    environment:
+      POSTGRES_DB: bank
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root123
+    volumes:
+      - bank-db-data:/var/lib/postgresql/data
+    networks:
+      - myNetwork
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d bank"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  discovery-service:
+    image: chandrakesh17/discovery-service
+    container_name: discovery-service
+    networks:
+      - myNetwork
+    ports:
+      - "8761:8761"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8761/actuator/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  config-server:
+    image: chandrakesh17/config-server
+    container_name: config-server
+    networks:
+      - myNetwork
+    depends_on:
+      discovery-service:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8888/actuator/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  bank-service:
+    image: chandrakesh17/bank-service
+    container_name: bank-service
+    networks:
+      - myNetwork
+    depends_on:
+      config-server:
+        condition: service_healthy
+      bank-db:
+        condition: service_healthy
+
+  transaction-service:
+    image: chandrakesh17/transaction-service
+    container_name: transaction-service
+    networks:
+      - myNetwork
+    depends_on:
+      config-server:
+        condition: service_healthy
+      transaction-db:
+        condition: service_healthy
+
+#  zipkin:
+#    image: openzipkin/zipkin
+#    container_name: zipkin
+#    ports:
+#      - "9411:9411"
+#    networks:
+#      - myNetwork
+#
+  api-gateway:
+    image: chandrakesh17/api-gateway
+    container_name: api-gateway
+    networks:
+      - myNetwork
+    depends_on:
+      bank-service:
+        condition: service_started
+      transaction-service:
+        condition: service_started
+    ports:
+      - "8080:9003"
+
+volumes:
+  transaction-db-data:
+  bank-db-data:
+
+networks:
+  myNetwork:

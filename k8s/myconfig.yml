@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-config
+data:
+  BANK_PG_DATA: /var/lib/postgresql/data/pgdata
+  TRANSACTION_PG_DATA: /var/lib/postgresql/data/pgdata
+  BANK_DB_SERVICE: bank-db-service
+  TRANSACTION_DB_SERVICE: transaction-db-service

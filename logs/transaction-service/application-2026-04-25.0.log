@@ -1,0 +1,190 @@
+25-04-2026 14:18:06.418 [main] [-] INFO  transaction-service-c.c.t.TransactionServiceApplication.logStarting - Starting TransactionServiceApplication using Java 25.0.2 with PID 14512 (C:\Downloads_Latest\payment-app\transaction-service\target\classes started by chand in C:\Downloads_Latest\payment-app)
+25-04-2026 14:18:06.423 [main] [-] INFO  transaction-service-c.c.t.TransactionServiceApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+25-04-2026 14:18:06.555 [main] [-] INFO  transaction-service-o.s.c.c.c.ConfigServerConfigDataLoader.log - Fetching config from server at : http://localhost:8888
+25-04-2026 14:18:06.557 [main] [-] INFO  transaction-service-o.s.c.c.c.ConfigServerConfigDataLoader.log - Located environment: name=transaction-service, profiles=[default], label=null, version=d28ba4db593c7dbc57dbd946c2cd02cdf91fcfd1, state=
+25-04-2026 14:18:08.996 [main] [-] INFO  transaction-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+25-04-2026 14:18:09.283 [main] [-] INFO  transaction-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 265 ms. Found 1 JPA repository interface.
+25-04-2026 14:18:09.959 [main] [-] INFO  transaction-service-o.s.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=d1df567e-fbc9-3390-91e2-ce8375a11bef
+25-04-2026 14:18:11.278 [main] [-] INFO  transaction-service-o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 9002 (http)
+25-04-2026 14:18:11.295 [main] [-] INFO  transaction-service-o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-9002"]
+25-04-2026 14:18:11.298 [main] [-] INFO  transaction-service-o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+25-04-2026 14:18:11.299 [main] [-] INFO  transaction-service-o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.53]
+25-04-2026 14:18:11.387 [main] [-] INFO  transaction-service-o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+25-04-2026 14:18:11.388 [main] [-] INFO  transaction-service-o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 4827 ms
+25-04-2026 14:18:13.458 [main] [-] INFO  transaction-service-o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+25-04-2026 14:18:13.674 [main] [-] INFO  transaction-service-org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.6.45.Final
+25-04-2026 14:18:13.769 [main] [-] INFO  transaction-service-o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+25-04-2026 14:18:14.300 [main] [-] INFO  transaction-service-o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+25-04-2026 14:18:14.341 [main] [-] INFO  transaction-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+25-04-2026 14:18:14.569 [main] [-] INFO  transaction-service-com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@d7c4fcb
+25-04-2026 14:18:14.571 [main] [-] INFO  transaction-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+25-04-2026 14:18:14.712 [main] [-] INFO  transaction-service-o.hibernate.orm.connections.pooling.logConnectionInfo - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+25-04-2026 14:18:15.923 [main] [-] INFO  transaction-service-o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+25-04-2026 14:18:16.019 [main] [-] INFO  transaction-service-o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+25-04-2026 14:18:16.183 [main] [-] WARN  transaction-service-o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+25-04-2026 14:18:16.351 [main] [-] INFO  transaction-service-o.s.c.o.FeignClientFactoryBean.getTarget - For 'bank-service' URL not provided. Will try picking an instance via load-balancing.
+25-04-2026 14:18:18.210 [main] [-] INFO  transaction-service-o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration.restTemplateDiscoveryClientOptionalArgs - Eureka HTTP Client uses RestTemplate.
+25-04-2026 14:18:18.296 [main] [-] WARN  transaction-service-o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger.afterPropertiesSet - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+25-04-2026 14:18:18.330 [main] [-] INFO  transaction-service-o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 1 endpoint beneath base path '/actuator'
+25-04-2026 14:18:18.531 [main] [-] INFO  transaction-service-o.s.c.n.eureka.InstanceInfoFactory.create - Setting initial instance status as: STARTING
+25-04-2026 14:18:18.598 [main] [-] INFO  transaction-service-c.netflix.discovery.DiscoveryClient.<init> - Initializing Eureka in region us-east-1
+25-04-2026 14:18:18.603 [main] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 14:18:18.618 [main] [-] INFO  transaction-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Disable delta property : false
+25-04-2026 14:18:18.619 [main] [-] INFO  transaction-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Single vip registry refresh property : null
+25-04-2026 14:18:18.620 [main] [-] INFO  transaction-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Force full registry fetch : false
+25-04-2026 14:18:18.620 [main] [-] INFO  transaction-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application is null : false
+25-04-2026 14:18:18.620 [main] [-] INFO  transaction-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Registered Applications size is zero : true
+25-04-2026 14:18:18.620 [main] [-] INFO  transaction-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application version is -1: true
+25-04-2026 14:18:18.620 [main] [-] INFO  transaction-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - Getting all instance registry info from the eureka server
+25-04-2026 14:18:19.230 [main] [-] INFO  transaction-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - The response status is 200
+25-04-2026 14:18:19.235 [main] [-] INFO  transaction-service-c.netflix.discovery.DiscoveryClient.initScheduledTasks - Starting heartbeat executor: renew interval is: 30
+25-04-2026 14:18:19.240 [main] [-] INFO  transaction-service-c.n.discovery.InstanceInfoReplicator.<init> - InstanceInfoReplicator onDemand update allowed rate per min is 4
+25-04-2026 14:18:19.244 [main] [-] INFO  transaction-service-c.netflix.discovery.DiscoveryClient.<init> - Discovery Client initialized at timestamp 1777106899243 with initial instances count: 4
+25-04-2026 14:18:19.252 [main] [-] INFO  transaction-service-o.s.c.n.e.s.EurekaServiceRegistry.register - Registering application TRANSACTION-SERVICE with eureka with status UP
+25-04-2026 14:18:19.253 [main] [-] INFO  transaction-service-c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1777106899253, current=UP, previous=STARTING]
+25-04-2026 14:18:19.257 [main] [-] INFO  transaction-service-o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-9002"]
+25-04-2026 14:18:19.259 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  transaction-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_TRANSACTION-SERVICE/transaction-service:9002:1: registering service...
+25-04-2026 14:18:19.287 [main] [-] INFO  transaction-service-o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 9002 (http) with context path '/'
+25-04-2026 14:18:19.289 [main] [-] INFO  transaction-service-o.s.c.n.e.s.EurekaAutoServiceRegistration.onApplicationEvent - Updating port to 9002
+25-04-2026 14:18:19.334 [main] [-] INFO  transaction-service-c.c.t.TransactionServiceApplication.logStarted - Started TransactionServiceApplication in 15.495 seconds (process running for 16.656)
+25-04-2026 14:18:19.423 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  transaction-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_TRANSACTION-SERVICE/transaction-service:9002:1 - registration status: 204
+25-04-2026 14:23:18.671 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 14:28:18.772 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 14:33:18.796 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 14:38:18.897 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 14:43:19.017 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 14:48:19.081 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 14:53:19.116 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 14:58:19.302 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 15:03:19.683 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 15:08:19.781 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 15:13:19.873 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 15:16:07.207 [SpringApplicationShutdownHook] [-] INFO  transaction-service-o.s.c.n.e.s.EurekaServiceRegistry.deregister - Unregistering application TRANSACTION-SERVICE with eureka with status DOWN
+25-04-2026 15:16:07.268 [SpringApplicationShutdownHook] [-] INFO  transaction-service-c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1777110367267, current=DOWN, previous=UP]
+25-04-2026 15:16:07.276 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  transaction-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_TRANSACTION-SERVICE/transaction-service:9002:1: registering service...
+25-04-2026 15:16:07.545 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  transaction-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_TRANSACTION-SERVICE/transaction-service:9002:1 - registration status: 204
+25-04-2026 15:16:07.756 [SpringApplicationShutdownHook] [-] INFO  transaction-service-o.s.b.w.e.tomcat.GracefulShutdown.shutDownGracefully - Commencing graceful shutdown. Waiting for active requests to complete
+25-04-2026 15:16:07.900 [tomcat-shutdown] [-] INFO  transaction-service-o.s.b.w.e.tomcat.GracefulShutdown.doShutdown - Graceful shutdown complete
+25-04-2026 15:16:08.199 [SpringApplicationShutdownHook] [-] INFO  transaction-service-o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+25-04-2026 15:16:08.473 [SpringApplicationShutdownHook] [-] INFO  transaction-service-com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+25-04-2026 15:16:08.563 [SpringApplicationShutdownHook] [-] INFO  transaction-service-com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+25-04-2026 15:16:08.944 [SpringApplicationShutdownHook] [-] INFO  transaction-service-c.netflix.discovery.DiscoveryClient.shutdown - Shutting down DiscoveryClient ...
+25-04-2026 15:16:11.965 [SpringApplicationShutdownHook] [-] INFO  transaction-service-c.netflix.discovery.DiscoveryClient.unregister - Unregistering ...
+25-04-2026 15:16:12.017 [SpringApplicationShutdownHook] [-] INFO  transaction-service-c.netflix.discovery.DiscoveryClient.unregister - DiscoveryClient_TRANSACTION-SERVICE/transaction-service:9002:1 - deregister  status: 200
+25-04-2026 15:16:12.020 [SpringApplicationShutdownHook] [-] INFO  transaction-service-c.netflix.discovery.DiscoveryClient.shutdown - Completed shut down of DiscoveryClient
+25-04-2026 15:16:18.241 [main] [-] INFO  transaction-service-c.c.t.TransactionServiceApplication.logStarting - Starting TransactionServiceApplication using Java 25.0.2 with PID 17912 (C:\Downloads_Latest\payment-app\transaction-service\target\classes started by chand in C:\Downloads_Latest\payment-app)
+25-04-2026 15:16:18.253 [main] [-] INFO  transaction-service-c.c.t.TransactionServiceApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+25-04-2026 15:16:18.352 [main] [-] INFO  transaction-service-o.s.c.c.c.ConfigServerConfigDataLoader.log - Fetching config from server at : http://localhost:8888
+25-04-2026 15:16:18.353 [main] [-] INFO  transaction-service-o.s.c.c.c.ConfigServerConfigDataLoader.log - Located environment: name=transaction-service, profiles=[default], label=null, version=d28ba4db593c7dbc57dbd946c2cd02cdf91fcfd1, state=
+25-04-2026 15:16:23.037 [main] [-] INFO  transaction-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+25-04-2026 15:16:23.644 [main] [-] INFO  transaction-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 577 ms. Found 1 JPA repository interface.
+25-04-2026 15:16:25.034 [main] [-] INFO  transaction-service-o.s.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=d1df567e-fbc9-3390-91e2-ce8375a11bef
+25-04-2026 15:16:26.677 [main] [-] INFO  transaction-service-o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 9002 (http)
+25-04-2026 15:16:26.707 [main] [-] INFO  transaction-service-o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-9002"]
+25-04-2026 15:16:26.712 [main] [-] INFO  transaction-service-o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+25-04-2026 15:16:26.712 [main] [-] INFO  transaction-service-o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.53]
+25-04-2026 15:16:26.899 [main] [-] INFO  transaction-service-o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+25-04-2026 15:16:26.901 [main] [-] INFO  transaction-service-o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 8545 ms
+25-04-2026 15:16:29.812 [main] [-] INFO  transaction-service-o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+25-04-2026 15:16:30.282 [main] [-] INFO  transaction-service-org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.6.45.Final
+25-04-2026 15:16:30.411 [main] [-] INFO  transaction-service-o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+25-04-2026 15:16:31.234 [main] [-] INFO  transaction-service-o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+25-04-2026 15:16:31.306 [main] [-] INFO  transaction-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+25-04-2026 15:16:31.706 [main] [-] INFO  transaction-service-com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1fc386f8
+25-04-2026 15:16:31.710 [main] [-] INFO  transaction-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+25-04-2026 15:16:32.137 [main] [-] INFO  transaction-service-o.hibernate.orm.connections.pooling.logConnectionInfo - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+25-04-2026 15:16:34.889 [main] [-] INFO  transaction-service-o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+25-04-2026 15:16:35.220 [main] [-] INFO  transaction-service-o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+25-04-2026 15:16:35.508 [main] [-] WARN  transaction-service-o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+25-04-2026 15:16:35.716 [main] [-] INFO  transaction-service-o.s.c.o.FeignClientFactoryBean.getTarget - For 'bank-service' URL not provided. Will try picking an instance via load-balancing.
+25-04-2026 15:16:38.562 [main] [-] INFO  transaction-service-o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration.restTemplateDiscoveryClientOptionalArgs - Eureka HTTP Client uses RestTemplate.
+25-04-2026 15:16:38.635 [main] [-] WARN  transaction-service-o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger.afterPropertiesSet - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+25-04-2026 15:16:38.694 [main] [-] INFO  transaction-service-o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 1 endpoint beneath base path '/actuator'
+25-04-2026 15:16:38.901 [main] [-] INFO  transaction-service-o.s.c.n.eureka.InstanceInfoFactory.create - Setting initial instance status as: STARTING
+25-04-2026 15:16:38.977 [main] [-] INFO  transaction-service-c.netflix.discovery.DiscoveryClient.<init> - Initializing Eureka in region us-east-1
+25-04-2026 15:16:38.983 [main] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 15:16:39.002 [main] [-] INFO  transaction-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Disable delta property : false
+25-04-2026 15:16:39.003 [main] [-] INFO  transaction-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Single vip registry refresh property : null
+25-04-2026 15:16:39.003 [main] [-] INFO  transaction-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Force full registry fetch : false
+25-04-2026 15:16:39.003 [main] [-] INFO  transaction-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application is null : false
+25-04-2026 15:16:39.004 [main] [-] INFO  transaction-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Registered Applications size is zero : true
+25-04-2026 15:16:39.004 [main] [-] INFO  transaction-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application version is -1: true
+25-04-2026 15:16:39.004 [main] [-] INFO  transaction-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - Getting all instance registry info from the eureka server
+25-04-2026 15:16:39.640 [main] [-] INFO  transaction-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - The response status is 200
+25-04-2026 15:16:39.647 [main] [-] INFO  transaction-service-c.netflix.discovery.DiscoveryClient.initScheduledTasks - Starting heartbeat executor: renew interval is: 30
+25-04-2026 15:16:39.674 [main] [-] INFO  transaction-service-c.n.discovery.InstanceInfoReplicator.<init> - InstanceInfoReplicator onDemand update allowed rate per min is 4
+25-04-2026 15:16:39.679 [main] [-] INFO  transaction-service-c.netflix.discovery.DiscoveryClient.<init> - Discovery Client initialized at timestamp 1777110399677 with initial instances count: 1
+25-04-2026 15:16:39.687 [main] [-] INFO  transaction-service-o.s.c.n.e.s.EurekaServiceRegistry.register - Registering application TRANSACTION-SERVICE with eureka with status UP
+25-04-2026 15:16:39.689 [main] [-] INFO  transaction-service-c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1777110399689, current=UP, previous=STARTING]
+25-04-2026 15:16:39.693 [main] [-] INFO  transaction-service-o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-9002"]
+25-04-2026 15:16:39.695 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  transaction-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_TRANSACTION-SERVICE/transaction-service:9002:1: registering service...
+25-04-2026 15:16:39.723 [main] [-] INFO  transaction-service-o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 9002 (http) with context path '/'
+25-04-2026 15:16:39.725 [main] [-] INFO  transaction-service-o.s.c.n.e.s.EurekaAutoServiceRegistration.onApplicationEvent - Updating port to 9002
+25-04-2026 15:16:39.902 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  transaction-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_TRANSACTION-SERVICE/transaction-service:9002:1 - registration status: 204
+25-04-2026 15:16:39.967 [main] [-] INFO  transaction-service-c.c.t.TransactionServiceApplication.logStarted - Started TransactionServiceApplication in 25.372 seconds (process running for 26.255)
+25-04-2026 15:21:39.045 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 15:26:39.156 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 15:31:39.243 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 15:36:39.341 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 15:41:39.400 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 15:46:39.478 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 15:51:39.605 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 15:56:39.650 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 16:01:39.723 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 16:05:27.632 [http-nio-9002-exec-1] [-] INFO  transaction-service-o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-04-2026 16:05:27.663 [http-nio-9002-exec-1] [-] INFO  transaction-service-o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+25-04-2026 16:05:27.881 [http-nio-9002-exec-1] [-] INFO  transaction-service-o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 216 ms
+25-04-2026 16:06:39.845 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 16:11:39.925 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 19:14:11.318 [HikariPool-1:housekeeper] [-] WARN  transaction-service-com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h2m38s63ms939µs300ns).
+25-04-2026 19:14:58.566 [HikariPool-1:housekeeper] [-] WARN  transaction-service-com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50s296ms277µs).
+25-04-2026 19:19:12.809 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 19:24:12.915 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 19:29:12.986 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 19:34:13.116 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 19:39:13.154 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 19:44:13.223 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 19:49:13.264 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 19:54:13.301 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 19:59:13.364 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 20:04:13.400 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 20:09:13.423 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 20:14:13.481 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 20:19:13.507 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 20:24:13.523 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 20:29:13.546 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 20:34:13.565 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 20:39:13.581 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 20:44:13.623 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 20:49:13.643 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 20:55:57.017 [HikariPool-1:housekeeper] [-] WARN  transaction-service-com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m25s434ms23µs200ns).
+25-04-2026 21:00:09.087 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 22:39:17.732 [HikariPool-1:housekeeper] [-] WARN  transaction-service-com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h37m20s583ms447µs900ns).
+25-04-2026 22:41:59.824 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 22:46:59.902 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 22:51:59.938 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 22:56:59.950 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 23:01:59.970 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 23:06:59.982 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 23:11:59.993 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 23:16:59.996 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 23:22:00.001 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 23:27:00.011 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 23:32:00.020 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 23:37:00.035 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 23:42:00.074 [AsyncResolver-bootstrap-executor-%d] [-] INFO  transaction-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 23:50:44.739 [HikariPool-1:housekeeper] [-] WARN  transaction-service-com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m25s468ms439µs300ns).

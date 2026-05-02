@@ -1,0 +1,221 @@
+25-04-2026 14:18:05.206 [main] [-] INFO  bank-service-c.c.b.BankServiceApplication.logStarting - Starting BankServiceApplication using Java 25.0.2 with PID 22132 (C:\Downloads_Latest\payment-app\bank-service\target\classes started by chand in C:\Downloads_Latest\payment-app)
+25-04-2026 14:18:05.210 [main] [-] INFO  bank-service-c.c.b.BankServiceApplication.logStartupProfileInfo - The following 1 profile is active: "dev"
+25-04-2026 14:18:05.284 [main] [-] INFO  bank-service-o.s.c.c.c.ConfigServerConfigDataLoader.log - Fetching config from server at : http://localhost:8888
+25-04-2026 14:18:05.285 [main] [-] INFO  bank-service-o.s.c.c.c.ConfigServerConfigDataLoader.log - Located environment: name=bank-service, profiles=[default], label=null, version=d28ba4db593c7dbc57dbd946c2cd02cdf91fcfd1, state=
+25-04-2026 14:18:05.285 [main] [-] INFO  bank-service-o.s.c.c.c.ConfigServerConfigDataLoader.log - Fetching config from server at : http://localhost:8888
+25-04-2026 14:18:05.285 [main] [-] INFO  bank-service-o.s.c.c.c.ConfigServerConfigDataLoader.log - Located environment: name=bank-service, profiles=[dev], label=null, version=d28ba4db593c7dbc57dbd946c2cd02cdf91fcfd1, state=
+25-04-2026 14:18:07.886 [main] [-] INFO  bank-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+25-04-2026 14:18:08.258 [main] [-] INFO  bank-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 347 ms. Found 1 JPA repository interface.
+25-04-2026 14:18:09.140 [main] [-] INFO  bank-service-o.s.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=aaa8aa88-0dca-3be5-966b-474143c3c7ab
+25-04-2026 14:18:11.277 [main] [-] INFO  bank-service-o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 9001 (http)
+25-04-2026 14:18:11.295 [main] [-] INFO  bank-service-o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-9001"]
+25-04-2026 14:18:11.298 [main] [-] INFO  bank-service-o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+25-04-2026 14:18:11.298 [main] [-] INFO  bank-service-o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.53]
+25-04-2026 14:18:11.388 [main] [-] INFO  bank-service-o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+25-04-2026 14:18:11.388 [main] [-] INFO  bank-service-o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 6100 ms
+25-04-2026 14:18:13.835 [main] [-] INFO  bank-service-o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+25-04-2026 14:18:13.927 [main] [-] INFO  bank-service-org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.6.45.Final
+25-04-2026 14:18:13.984 [main] [-] INFO  bank-service-o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+25-04-2026 14:18:14.345 [main] [-] INFO  bank-service-o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+25-04-2026 14:18:14.377 [main] [-] INFO  bank-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+25-04-2026 14:18:14.567 [main] [-] INFO  bank-service-com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2a20aa4e
+25-04-2026 14:18:14.569 [main] [-] INFO  bank-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+25-04-2026 14:18:14.710 [main] [-] INFO  bank-service-o.hibernate.orm.connections.pooling.logConnectionInfo - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+25-04-2026 14:18:15.923 [main] [-] INFO  bank-service-o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+25-04-2026 14:18:16.019 [main] [-] INFO  bank-service-o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+25-04-2026 14:18:17.159 [main] [-] WARN  bank-service-o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+25-04-2026 14:18:17.537 [main] [-] INFO  bank-service-o.s.c.o.FeignClientFactoryBean.getTarget - For 'transaction-service' URL not provided. Will try picking an instance via load-balancing.
+25-04-2026 14:18:20.371 [main] [-] INFO  bank-service-o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration.restTemplateDiscoveryClientOptionalArgs - Eureka HTTP Client uses RestTemplate.
+25-04-2026 14:18:20.415 [main] [-] WARN  bank-service-o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger.afterPropertiesSet - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+25-04-2026 14:18:20.436 [main] [-] INFO  bank-service-o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 26 endpoints beneath base path '/actuator'
+25-04-2026 14:18:20.523 [main] [-] INFO  bank-service-o.s.c.n.eureka.InstanceInfoFactory.create - Setting initial instance status as: STARTING
+25-04-2026 14:18:20.553 [main] [-] INFO  bank-service-c.netflix.discovery.DiscoveryClient.<init> - Initializing Eureka in region us-east-1
+25-04-2026 14:18:20.557 [main] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 14:18:20.568 [main] [-] INFO  bank-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Disable delta property : false
+25-04-2026 14:18:20.569 [main] [-] INFO  bank-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Single vip registry refresh property : null
+25-04-2026 14:18:20.569 [main] [-] INFO  bank-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Force full registry fetch : false
+25-04-2026 14:18:20.569 [main] [-] INFO  bank-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application is null : false
+25-04-2026 14:18:20.569 [main] [-] INFO  bank-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Registered Applications size is zero : true
+25-04-2026 14:18:20.569 [main] [-] INFO  bank-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application version is -1: true
+25-04-2026 14:18:20.569 [main] [-] INFO  bank-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - Getting all instance registry info from the eureka server
+25-04-2026 14:18:20.842 [main] [-] INFO  bank-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - The response status is 200
+25-04-2026 14:18:20.845 [main] [-] INFO  bank-service-c.netflix.discovery.DiscoveryClient.initScheduledTasks - Starting heartbeat executor: renew interval is: 30
+25-04-2026 14:18:20.848 [main] [-] INFO  bank-service-c.n.discovery.InstanceInfoReplicator.<init> - InstanceInfoReplicator onDemand update allowed rate per min is 4
+25-04-2026 14:18:20.849 [main] [-] INFO  bank-service-c.netflix.discovery.DiscoveryClient.<init> - Discovery Client initialized at timestamp 1777106900849 with initial instances count: 4
+25-04-2026 14:18:20.859 [main] [-] INFO  bank-service-o.s.c.n.e.s.EurekaServiceRegistry.register - Registering application BANK-SERVICE with eureka with status UP
+25-04-2026 14:18:20.860 [main] [-] INFO  bank-service-c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1777106900860, current=UP, previous=STARTING]
+25-04-2026 14:18:20.861 [main] [-] INFO  bank-service-o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-9001"]
+25-04-2026 14:18:20.861 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  bank-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_BANK-SERVICE/bank-service:9001:1: registering service...
+25-04-2026 14:18:20.873 [main] [-] INFO  bank-service-o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 9001 (http) with context path '/'
+25-04-2026 14:18:20.874 [main] [-] INFO  bank-service-o.s.c.n.e.s.EurekaAutoServiceRegistration.onApplicationEvent - Updating port to 9001
+25-04-2026 14:18:20.907 [main] [-] INFO  bank-service-c.c.b.BankServiceApplication.logStarted - Started BankServiceApplication in 22.688 seconds (process running for 24.034)
+25-04-2026 14:18:20.907 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  bank-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_BANK-SERVICE/bank-service:9001:1 - registration status: 204
+25-04-2026 14:23:20.613 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 14:28:20.790 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 14:33:21.116 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 14:38:21.336 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 14:43:21.610 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 14:48:21.671 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 14:53:21.720 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 14:58:21.898 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 15:03:23.405 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 15:08:23.549 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 15:13:23.645 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 15:15:54.087 [SpringApplicationShutdownHook] [-] INFO  bank-service-o.s.c.n.e.s.EurekaServiceRegistry.deregister - Unregistering application BANK-SERVICE with eureka with status DOWN
+25-04-2026 15:15:54.132 [SpringApplicationShutdownHook] [-] INFO  bank-service-c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1777110354131, current=DOWN, previous=UP]
+25-04-2026 15:15:54.148 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  bank-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_BANK-SERVICE/bank-service:9001:1: registering service...
+25-04-2026 15:15:54.323 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  bank-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_BANK-SERVICE/bank-service:9001:1 - registration status: 204
+25-04-2026 15:15:54.482 [SpringApplicationShutdownHook] [-] INFO  bank-service-o.s.b.w.e.tomcat.GracefulShutdown.shutDownGracefully - Commencing graceful shutdown. Waiting for active requests to complete
+25-04-2026 15:15:54.611 [tomcat-shutdown] [-] INFO  bank-service-o.s.b.w.e.tomcat.GracefulShutdown.doShutdown - Graceful shutdown complete
+25-04-2026 15:15:54.829 [SpringApplicationShutdownHook] [-] INFO  bank-service-o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+25-04-2026 15:15:55.007 [SpringApplicationShutdownHook] [-] INFO  bank-service-com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+25-04-2026 15:15:55.075 [SpringApplicationShutdownHook] [-] INFO  bank-service-com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+25-04-2026 15:15:56.046 [SpringApplicationShutdownHook] [-] INFO  bank-service-c.netflix.discovery.DiscoveryClient.shutdown - Shutting down DiscoveryClient ...
+25-04-2026 15:15:59.060 [SpringApplicationShutdownHook] [-] INFO  bank-service-c.netflix.discovery.DiscoveryClient.unregister - Unregistering ...
+25-04-2026 15:15:59.120 [SpringApplicationShutdownHook] [-] INFO  bank-service-c.netflix.discovery.DiscoveryClient.unregister - DiscoveryClient_BANK-SERVICE/bank-service:9001:1 - deregister  status: 200
+25-04-2026 15:15:59.123 [SpringApplicationShutdownHook] [-] INFO  bank-service-c.netflix.discovery.DiscoveryClient.shutdown - Completed shut down of DiscoveryClient
+25-04-2026 15:16:19.890 [main] [-] INFO  bank-service-c.c.b.BankServiceApplication.logStarting - Starting BankServiceApplication using Java 25.0.2 with PID 10796 (C:\Downloads_Latest\payment-app\bank-service\target\classes started by chand in C:\Downloads_Latest\payment-app)
+25-04-2026 15:16:19.897 [main] [-] INFO  bank-service-c.c.b.BankServiceApplication.logStartupProfileInfo - The following 1 profile is active: "dev"
+25-04-2026 15:16:20.121 [main] [-] INFO  bank-service-o.s.c.c.c.ConfigServerConfigDataLoader.log - Fetching config from server at : http://localhost:8888
+25-04-2026 15:16:20.122 [main] [-] INFO  bank-service-o.s.c.c.c.ConfigServerConfigDataLoader.log - Located environment: name=bank-service, profiles=[default], label=null, version=d28ba4db593c7dbc57dbd946c2cd02cdf91fcfd1, state=
+25-04-2026 15:16:20.122 [main] [-] INFO  bank-service-o.s.c.c.c.ConfigServerConfigDataLoader.log - Fetching config from server at : http://localhost:8888
+25-04-2026 15:16:20.123 [main] [-] INFO  bank-service-o.s.c.c.c.ConfigServerConfigDataLoader.log - Located environment: name=bank-service, profiles=[dev], label=null, version=d28ba4db593c7dbc57dbd946c2cd02cdf91fcfd1, state=
+25-04-2026 15:16:25.652 [main] [-] INFO  bank-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+25-04-2026 15:16:26.083 [main] [-] INFO  bank-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 343 ms. Found 1 JPA repository interface.
+25-04-2026 15:16:27.207 [main] [-] INFO  bank-service-o.s.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=aaa8aa88-0dca-3be5-966b-474143c3c7ab
+25-04-2026 15:16:31.050 [main] [-] INFO  bank-service-o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 9001 (http)
+25-04-2026 15:16:31.077 [main] [-] INFO  bank-service-o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-9001"]
+25-04-2026 15:16:31.080 [main] [-] INFO  bank-service-o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+25-04-2026 15:16:31.081 [main] [-] INFO  bank-service-o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.53]
+25-04-2026 15:16:31.237 [main] [-] INFO  bank-service-o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+25-04-2026 15:16:31.238 [main] [-] INFO  bank-service-o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 11110 ms
+25-04-2026 15:16:34.266 [main] [-] INFO  bank-service-o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+25-04-2026 15:16:34.388 [main] [-] INFO  bank-service-org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.6.45.Final
+25-04-2026 15:16:34.439 [main] [-] INFO  bank-service-o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+25-04-2026 15:16:34.824 [main] [-] INFO  bank-service-o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+25-04-2026 15:16:34.867 [main] [-] INFO  bank-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+25-04-2026 15:16:35.179 [main] [-] INFO  bank-service-com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6a7b4ff5
+25-04-2026 15:16:35.185 [main] [-] INFO  bank-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+25-04-2026 15:16:35.300 [main] [-] INFO  bank-service-o.hibernate.orm.connections.pooling.logConnectionInfo - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+25-04-2026 15:16:37.597 [main] [-] INFO  bank-service-o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+25-04-2026 15:16:37.770 [main] [-] INFO  bank-service-o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+25-04-2026 15:16:39.772 [main] [-] WARN  bank-service-o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+25-04-2026 15:16:40.237 [main] [-] INFO  bank-service-o.s.c.o.FeignClientFactoryBean.getTarget - For 'transaction-service' URL not provided. Will try picking an instance via load-balancing.
+25-04-2026 15:16:42.469 [main] [-] INFO  bank-service-o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration.restTemplateDiscoveryClientOptionalArgs - Eureka HTTP Client uses RestTemplate.
+25-04-2026 15:16:42.514 [main] [-] WARN  bank-service-o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger.afterPropertiesSet - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+25-04-2026 15:16:42.534 [main] [-] INFO  bank-service-o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 26 endpoints beneath base path '/actuator'
+25-04-2026 15:16:42.609 [main] [-] INFO  bank-service-o.s.c.n.eureka.InstanceInfoFactory.create - Setting initial instance status as: STARTING
+25-04-2026 15:16:42.636 [main] [-] INFO  bank-service-c.netflix.discovery.DiscoveryClient.<init> - Initializing Eureka in region us-east-1
+25-04-2026 15:16:42.639 [main] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 15:16:42.648 [main] [-] INFO  bank-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Disable delta property : false
+25-04-2026 15:16:42.648 [main] [-] INFO  bank-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Single vip registry refresh property : null
+25-04-2026 15:16:42.648 [main] [-] INFO  bank-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Force full registry fetch : false
+25-04-2026 15:16:42.648 [main] [-] INFO  bank-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application is null : false
+25-04-2026 15:16:42.649 [main] [-] INFO  bank-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Registered Applications size is zero : true
+25-04-2026 15:16:42.649 [main] [-] INFO  bank-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application version is -1: true
+25-04-2026 15:16:42.649 [main] [-] INFO  bank-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - Getting all instance registry info from the eureka server
+25-04-2026 15:16:42.886 [main] [-] INFO  bank-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - The response status is 200
+25-04-2026 15:16:42.889 [main] [-] INFO  bank-service-c.netflix.discovery.DiscoveryClient.initScheduledTasks - Starting heartbeat executor: renew interval is: 30
+25-04-2026 15:16:42.891 [main] [-] INFO  bank-service-c.n.discovery.InstanceInfoReplicator.<init> - InstanceInfoReplicator onDemand update allowed rate per min is 4
+25-04-2026 15:16:42.893 [main] [-] INFO  bank-service-c.netflix.discovery.DiscoveryClient.<init> - Discovery Client initialized at timestamp 1777110402892 with initial instances count: 1
+25-04-2026 15:16:42.905 [main] [-] INFO  bank-service-o.s.c.n.e.s.EurekaServiceRegistry.register - Registering application BANK-SERVICE with eureka with status UP
+25-04-2026 15:16:42.906 [main] [-] INFO  bank-service-c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1777110402906, current=UP, previous=STARTING]
+25-04-2026 15:16:42.908 [main] [-] INFO  bank-service-o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-9001"]
+25-04-2026 15:16:42.908 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  bank-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_BANK-SERVICE/bank-service:9001:1: registering service...
+25-04-2026 15:16:42.923 [main] [-] INFO  bank-service-o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 9001 (http) with context path '/'
+25-04-2026 15:16:42.925 [main] [-] INFO  bank-service-o.s.c.n.e.s.EurekaAutoServiceRegistration.onApplicationEvent - Updating port to 9001
+25-04-2026 15:16:42.971 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  bank-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_BANK-SERVICE/bank-service:9001:1 - registration status: 204
+25-04-2026 15:16:42.974 [main] [-] INFO  bank-service-c.c.b.BankServiceApplication.logStarted - Started BankServiceApplication in 32.399 seconds (process running for 36.063)
+25-04-2026 15:21:42.692 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 15:26:42.819 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 15:31:42.898 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 15:36:42.971 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 15:41:43.059 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 15:46:43.119 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 15:51:43.199 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 15:56:43.242 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 16:01:43.334 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 16:05:39.235 [http-nio-9001-exec-1] [-] INFO  bank-service-o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-04-2026 16:05:39.322 [http-nio-9001-exec-1] [-] INFO  bank-service-o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+25-04-2026 16:05:40.170 [http-nio-9001-exec-1] [-] INFO  bank-service-o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 826 ms
+25-04-2026 16:06:43.482 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 17:30:46.068 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 17:30:50.503 [HikariPool-1:housekeeper] [-] WARN  bank-service-com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h19m14s230ms319µs400ns).
+25-04-2026 19:14:12.737 [AsyncReporter{ZipkinHttpClientSender{http://localhost:9411/api/v2/spans}}] [-] WARN  bank-service-z.r.i.AsyncReporter$BoundedAsyncReporter.flush - Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+25-04-2026 19:14:12.865 [AsyncReporter{ZipkinHttpClientSender{http://localhost:9411/api/v2/spans}}] [-] WARN  bank-service-z.r.i.AsyncReporter$BoundedAsyncReporter.flush - Dropped 1 spans due to HttpConnectTimeoutException(HTTP connect timed out)
+java.net.http.HttpConnectTimeoutException: HTTP connect timed out
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:917)
+	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinHttpClientSender.postSpans(ZipkinHttpClientSender.java:60)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:69)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:41)
+	at zipkin2.reporter.BaseHttpSender.send(BaseHttpSender.java:123)
+	at zipkin2.reporter.internal.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:266)
+	at zipkin2.reporter.internal.AsyncReporter$Flusher.run(AsyncReporter.java:352)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: java.net.http.HttpConnectTimeoutException: HTTP connect timed out
+	at java.net.http/jdk.internal.net.http.MultiExchange.toTimeoutException(MultiExchange.java:618)
+	at java.net.http/jdk.internal.net.http.MultiExchange.getExceptionalCF(MultiExchange.java:561)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$2(MultiExchange.java:480)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:955)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:932)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:531)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2221)
+	at java.net.http/jdk.internal.net.http.Http1Exchange.lambda$cancelImpl$1(Http1Exchange.java:593)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: HTTP connect timed out
+	at java.net.http/jdk.internal.net.http.MultiExchange.toTimeoutException(MultiExchange.java:619)
+	... 10 common frames omitted
+25-04-2026 19:14:51.061 [HikariPool-1:housekeeper] [-] WARN  bank-service-com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h44m3s600ms452µs200ns).
+25-04-2026 19:19:17.008 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 19:24:17.115 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 19:29:17.174 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 19:34:17.212 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 19:39:17.250 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 19:44:17.286 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 19:49:17.347 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 19:54:17.389 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 19:59:17.451 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 20:04:17.481 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 20:09:17.501 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 20:14:17.541 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 20:19:17.573 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 20:24:17.603 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 20:29:17.623 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 20:34:17.646 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 20:39:17.667 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 20:44:17.694 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 20:49:17.717 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 20:56:01.620 [HikariPool-1:housekeeper] [-] WARN  bank-service-com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m6s340ms278µs500ns).
+25-04-2026 21:00:13.171 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 21:38:10.258 [HikariPool-1:housekeeper] [-] WARN  bank-service-com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=36m8s543ms113µs400ns).
+25-04-2026 22:39:45.178 [HikariPool-1:housekeeper] [-] WARN  bank-service-com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h1m34s841ms760µs900ns).
+25-04-2026 22:42:03.921 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 22:47:03.992 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 22:52:04.034 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 22:57:04.053 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 23:02:04.068 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 23:07:04.070 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 23:12:04.076 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 23:17:04.082 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 23:22:04.093 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 23:27:04.110 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 23:32:04.114 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 23:37:04.120 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 23:42:04.160 [AsyncResolver-bootstrap-executor-%d] [-] INFO  bank-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
